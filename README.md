@@ -7,7 +7,8 @@
 #
 <!-- ## 界面 -->
 ### 界面
-![ava](screenshot.png "1111111111111111")
+<img src="
+https://github.com/Allenscript/Ccapture/blob/master/images/screenshot.png">
 ## 运行准备
 
 - pip install -r reqrement.txt

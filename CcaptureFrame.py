@@ -83,6 +83,25 @@ class MainWindow ( wx.Frame ):
 		self.grabBmp = self.Get_Screen_Bmp()
 	def __del__( self ):
 		pass
+	def Help(self,event):
+		print('into help')
+		pass
+	def selectZone(self, event):
+		self.grabBmp = self.Get_Screen_Bmp()
+		gr = GrabFrame(self)
+		gr.Show()
+
+	def saveimg(self,event):
+		screen = wx.ScreenDC()
+		scale = self.display[0]/self.monitor[0]
+		width = self.zone2[0]-self.zone1[0]
+		height = self.zone2[1]-self.zone1[1]
+
+		bmp = wx.Bitmap(int(width*scale), int(height*scale))
+		mem = wx.MemoryDC(bmp)
+		mem.Blit(0,0, int(width*scale), int(height*scale), screen, int(self.zone1[0]*scale),int(self.zone1[1]*scale))
+		bmp.SaveFile("123" + '.png', wx.BITMAP_TYPE_PNG)
+
 	def setLabel(self,str):
 		self.m_staticText3.SetLabel(str)
 		pass
@@ -114,11 +133,11 @@ class MainWindow ( wx.Frame ):
 		# 	self.frame.ReleaseMouse()
 		pass
 
-	def selectZone( self, event ):
-		event.Skip()
+	# def selectZone( self, event ):
+	# 	event.Skip()
 
-	def saveimg( self, event ):
-		event.Skip()
+	# def saveimg( self, event ):
+	# 	event.Skip()
 
 	def Get_Screen_Bmp(self):
 		screen = wx.ScreenDC()

@@ -7,8 +7,8 @@
 #
 <!-- ## 界面 -->
 ### 界面
-<img src="
-https://github.com/Allenscript/Ccapture/blob/master/images/screenshot.png">
+<img src="https://github.com/Allenscript/Ccapture/blob/master/images/screenshot.png">
+
 ## 运行准备
 
 - pip install -r reqrement.txt

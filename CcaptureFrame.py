@@ -149,7 +149,7 @@ class MainWindow(wx.Frame):
 
     def Help(self, event):
         toastone = wx.MessageDialog(None, "快捷键：\n\
-                                    ", "帮助",
+                                    TODO", "帮助",
                                         wx.YES_DEFAULT | wx.ICON_QUESTION)
         if toastone.ShowModal() == wx.ID_YES:  # 如果点击了提示框的确定按钮
                 toastone.Destroy()
